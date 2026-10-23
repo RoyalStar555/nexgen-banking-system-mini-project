@@ -1,0 +1,148 @@
+/* ==========================================================================
+   NexGen Banking Design System — Keyframes & Animations
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shimmer Animation (Skeleton Loaders)
+   -------------------------------------------------------------------------- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton:nth-child(2) {
+  animation-delay: 150ms;
+}
+.skeleton:nth-child(3) {
+  animation-delay: 300ms;
+}
+.skeleton:nth-child(4) {
+  animation-delay: 450ms;
+}
+
+/* --------------------------------------------------------------------------
+   Fade In & Page Load
+   -------------------------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Slide Transitions
+   -------------------------------------------------------------------------- */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Button Spinner Animation
+   -------------------------------------------------------------------------- */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 0.75s linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Animation
+   -------------------------------------------------------------------------- */
+@keyframes modalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Vault Progress Fill
+   -------------------------------------------------------------------------- */
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--target-width, 0%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Pulse Animation (e.g. status dots or badges)
+   -------------------------------------------------------------------------- */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(13, 148, 136, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Balance Counter Pop
+   -------------------------------------------------------------------------- */
+@keyframes balancePop {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.balance-pop {
+  animation: balancePop 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

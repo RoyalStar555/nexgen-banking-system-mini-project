@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=frontend/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGen Banking — Next-Gen Digital Banking</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #0a0a1a 80%);
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(99, 102, 241, 0.2);
+      border-top-color: #6366f1;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 24px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+    p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 16px; }
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      transition: opacity 0.2s;
+    }
+    a:hover { opacity: 0.9; }
+  </style>
+  <script>
+    // Seamless immediate client-side redirection preserving repo root and hash routes (#/dashboard, #/passbook)
+    (function() {
+      var pathname = window.location.pathname;
+      pathname = pathname.replace(/\/index\.html$/i, '');
+      if (!pathname.endsWith('/')) {
+        pathname += '/';
+      }
+      var target = pathname + 'frontend/' + (window.location.hash || '');
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <div class="spinner"></div>
+  <h1>Launching NexGen Banking Platform...</h1>
+  <p>Connecting to secure digital banking ledger</p>
+  <p>If you are not automatically redirected, <a href="frontend/">Click here to enter</a>.</p>
+</body>
+</html>

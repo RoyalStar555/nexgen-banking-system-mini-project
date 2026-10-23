@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexGen Banking | Next-Gen Digital Banking</title>
+  <meta name="description" content="NexGen Banking System - Enterprise-Grade Next-Generation FinTech Digital Banking Simulation Platform">
+  <meta name="theme-color" content="#0a0a1a">
+
+  <!-- Google Font: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/design-tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Mobile menu overlay -->
+  <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+  
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar" class="sidebar" role="navigation" aria-label="Main navigation">
+    <!-- Logo section -->
+    <div class="sidebar-logo">
+      <div class="logo-icon">NB</div>
+      <div class="logo-text">
+        <span class="logo-name">NexGen</span>
+        <span class="logo-sub">Banking</span>
+      </div>
+    </div>
+    
+    <!-- Navigation links -->
+    <nav class="sidebar-nav">
+      <a href="#dashboard" class="nav-link" id="nav-dashboard" data-view="dashboard">
+        <span class="nav-icon" id="icon-dashboard"></span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a href="#deposit" class="nav-link" id="nav-deposit" data-view="deposit">
+        <span class="nav-icon" id="icon-deposit"></span>
+        <span class="nav-label">Deposit</span>
+      </a>
+      <a href="#withdraw" class="nav-link" id="nav-withdraw" data-view="withdraw">
+        <span class="nav-icon" id="icon-withdraw"></span>
+        <span class="nav-label">Withdraw</span>
+      </a>
+      <a href="#transfer" class="nav-link" id="nav-transfer" data-view="transfer">
+        <span class="nav-icon" id="icon-transfer"></span>
+        <span class="nav-label">Transfer</span>
+      </a>
+      <a href="#passbook" class="nav-link" id="nav-passbook" data-view="passbook">
+        <span class="nav-icon" id="icon-passbook"></span>
+        <span class="nav-label">Passbook</span>
+      </a>
+      <a href="#vaults" class="nav-link" id="nav-vaults" data-view="vaults">
+        <span class="nav-icon" id="icon-vaults"></span>
+        <span class="nav-label">Vaults</span>
+      </a>
+    </nav>
+    
+    <!-- Dynamic Multi-User Account Switcher -->
+    <div class="account-switcher" id="account-switcher">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </nav>
+  
+  <!-- Mobile Header -->
+  <header class="mobile-header" id="mobile-header">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-logo">NexGen Banking</div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="app-content" class="main-content" role="main" aria-live="polite">
+    <!-- Views are mounted here by app.js -->
+  </main>
+  
+  <!-- Toast Notifications -->
+  <div id="toast-container" class="toast-container" role="alert" aria-live="assertive"></div>
+  
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div id="modal-content" class="modal-content" role="dialog" aria-modal="true">
+      <!-- Modal content injected by ui.js -->
+    </div>
+  </div>
+
+  <!-- Single module script entry point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
